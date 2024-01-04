@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
@@ -51,16 +51,22 @@ export default function SwiperComponent() {
                   container
                   rowSpacing={1}
                   direction={"column"}
-                  sx={{ 
-                    color: "white",marginTop:"150px", alignContent:"flex-start", textAlign:"left"}}
+                  sx={{
+                    color: "white",
+                    marginTop: "150px",
+                    alignContent: "flex-start",
+                    textAlign: "left",
+                  }}
                 >
                   <Grid item xs={6}>
-                    <item >{item.author} : {item.source.name}</item>
+                    <item>
+                      {item.author} : {item.source.name}
+                    </item>
                   </Grid>
                   <Grid item xs={6}>
                     <item>{item.title}</item>
                   </Grid>
-                  <Grid item xs={6} >
+                  <Grid item xs={6}>
                     <item>{item.description}</item>
                   </Grid>
                 </Grid>
